@@ -47,9 +47,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/climbItems", tryRouter);
-app.use("/climbSessions", climbSessions);
-app.use("/climbEnv", climbEnv);
+app.use("/climbingItem", tryRouter);
+app.use("/climbingSession", climbSessions);
+app.use("/climbingEnv", climbEnv);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

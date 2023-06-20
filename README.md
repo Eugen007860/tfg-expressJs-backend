@@ -1,8 +1,8 @@
 # tfg-expressJs-backend
-Backend created to handle mobile climbing application requests. 
+Backend created to handle mobile climbing application requests.
 
 ## Install dependecies
-- npm install 
+- npm install
 
-## Run server 
+## Run server
 - npm run watch
