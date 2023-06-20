@@ -11,4 +11,21 @@ router.get("/", function (req, res, next) {
   });
 });
 
+router.post("/", function (req, res, next) {
+  console.log(req.body);
+  const data = req.body;
+  const item_id = data.item_id;
+  const temperature = data.temperature;
+  const humidity = data.humidity;
+  const location = data.location;
+  const strengthGraph = data.strengthGraph
+  db.query(
+    `INSERT INTO climb_env VALUES ("${item_id}", "${location}", ${temperature},"${strengthGraph}", ${humidity} ); `,
+    function (err, result, fields) {
+      if (err) throw err;
+      res.send(JSON.stringify(item_id));
+    }
+  );
+});
+
 module.exports = router;
