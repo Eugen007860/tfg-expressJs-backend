@@ -15,7 +15,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var tryRouter = require("./routes/climbItems");
+var climbingItem = require("./routes/climbItems");
 var climbSessions = require("./routes/climbSessions");
 var climbEnv = require("./routes/climbEnv");
 
@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/climbingItem", tryRouter);
+app.use("/climbingItem", climbingItem);
 app.use("/climbingSession", climbSessions);
 app.use("/climbingEnv", climbEnv);
 

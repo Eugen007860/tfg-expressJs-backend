@@ -32,4 +32,14 @@ router.post("/", function (req, res, next) {
   );
 });
 
+
+router.delete("/", function (req, res, next) {
+  console.log(req.query.id)
+  const id = req.query.id
+  db.query(`DELETE FROM climb_item WHERE climb_item.climb_item_id = '${id}'`, function (err, result, fields) {
+    if (err) throw err;
+      res.send(JSON.stringify(id));
+  });
+});
+
 module.exports = router;
