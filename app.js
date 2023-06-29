@@ -18,6 +18,7 @@ var usersRouter = require("./routes/users");
 var climbingItem = require("./routes/climbItems");
 var climbSessions = require("./routes/climbSessions");
 var climbEnv = require("./routes/climbEnv");
+var charts = require("./routes/charts");
 
 const livereload = require("livereload");
 const liveReloadServer = livereload.createServer();
@@ -50,6 +51,7 @@ app.use("/users", usersRouter);
 app.use("/climbingItem", climbingItem);
 app.use("/climbingSession", climbSessions);
 app.use("/climbingEnv", climbEnv);
+app.use("/charts", charts);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
